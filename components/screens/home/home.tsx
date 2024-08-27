@@ -1,6 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
+import CustomButton from "@/components/ui/custom.button";
 
 const Home = () => {
   return (
@@ -18,7 +19,19 @@ const Home = () => {
       >
         This is Android Page 🙌
       </Text>
-      <Link href={"/home"}>Route to tabs</Link>
+
+      <CustomButton>
+        <Link href={"/profile"} asChild>
+          <Text
+            style={{
+              color: "white",
+              textAlign: "center",
+            }}
+          >
+            Route to tabs
+          </Text>
+        </Link>
+      </CustomButton>
     </View>
   );
 };
